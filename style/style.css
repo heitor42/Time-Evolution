@@ -2,6 +2,10 @@ body {
     background-color: #48A4F8;
 }
 
+a {
+    text-decoration: none;
+}
+
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 30px;
@@ -31,7 +35,7 @@ header h1 {
     text-align: center;
 }
 
-.stopwatch-menu {
+.stopwatch-controls ul {
     display: flex;
     justify-content: space-between;
 
@@ -42,12 +46,15 @@ header h1 {
 }
 
 .stopwatch-main-function {
+    display: block;
+
     height: 3vw;
     width: 16vw;
 
     background: #9BCAF5;
     border-radius: 15px;
-    border: none;
+    text-align: center;
+    padding-top: 16px;
 
     margin-top: 16px;
 

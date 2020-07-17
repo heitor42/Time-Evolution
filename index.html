@@ -16,11 +16,13 @@
     </header>
 
     <section class="stopwatch-table">
-        <div class="stopwatch">0:00</div>
-        <menu class="stopwatch-menu">
-            <button class="stopwatch-main-function">Play</button>
-            <button class="stopwatch-main-function">Stop</button>
-        </menu>
+        <div class="stopwatch"></div>
+        <nav class="stopwatch-controls">
+            <ul>
+                <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.start()">Start</a></li>
+                <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.zero()">Stop</a></li>
+            </ul>
+        </nav>
     </section>
     
 </body>
