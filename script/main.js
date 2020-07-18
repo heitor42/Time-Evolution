@@ -2,6 +2,8 @@ class Stopwatch {
     constructor(display, results) {
         this.running = false;
         this.display = display;
+        this.results = results;
+        this.question = 0;
         this.reset();
         this.print(this.times);
     }
@@ -16,6 +18,21 @@ class Stopwatch {
             this.running = true;
             requestAnimationFrame(this.step.bind(this));
         }
+    }
+
+    saveResult() {
+        let times = this.times;
+        if (times[0] === 0 && times[1] === 0) return;
+        let li = document.createElement('li');
+        this.question += 1;
+        li.innerText = `Questão ${this.question} - ${this.format(times)}`;
+        this.results.appendChild(li);
+        this.zero()
+    }
+
+    clear() {
+        this.question = 0
+        clearChildren(this.results);
     }
 
     zero() {
@@ -64,6 +81,12 @@ function pad0(value, count) {
     return result;
 }
 
+function clearChildren(node) {
+    while (node.lastChild)
+        node.removeChild(node.lastChild);
+}
+
 let stopwatch = new Stopwatch(
-    document.querySelector('.stopwatch')
+    document.querySelector('.stopwatch'),
+    document.querySelector('.results')
 )
