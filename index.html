@@ -20,11 +20,13 @@
         <nav class="stopwatch-controls">
             <ul>
                 <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.start()">Start</a></li>
-                <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.saveResult()">Save</a></li>
-                <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.zero()">Stop</a></li>
+                <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.saveResult()">Finish</a></li>
+                <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.clear()">Clean historic</a></li>
             </ul>
         </nav>
-        <div class="stopwatch-historic"></div>
+        <div class="stopwatch-historic">
+            <ol class="results"></ol>
+        </div>
     </section>
     
 </body>
