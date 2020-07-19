@@ -1,89 +1,61 @@
 body {
-    background-color: #48A4F8;
-}
-
-a {
-    text-decoration: none;
+    background: #48A4F8;
+    font-family: 'Roboto Mono', monospace;
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
-}
-
-.stopwatch-table {
-    padding-top: 50px;
-    font-family: 'Roboto Mono', monospace;
-    color: #D7ECFF;
+    margin: 16px 32px;
+    font-family: Playfair Display;
+    font-size: 32px;
 }
 
 .stopwatch {
-    font-size: 16em;
-    text-shadow: 9.05618px 4.52809px 11.3202px rgba(0, 0, 0, 0.15);
+    display: flex;
+    color: #D7ECFF;
+    
+    font-size: 88px;
+    line-height: 103px;
 
-    padding-top: 24px;
-    height: 320px;
-    width: 48vw;
-    border-radius: 47px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
-
-    background-color: #9BCAF5;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
+    justify-content: center;
 }
 
 .stopwatch-controls ul {
     display: flex;
-    justify-content: space-between;
-
-    width: 43vw;
-
+}
+.stopwatch-controls {
+    width: 360px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.stopwatch-main-function {
-    display: block;
+.stopwatch-controls a {
+    text-decoration: none;
+    color: #D7ECFF;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 8px;
+}
 
-    height: 3vw;
-    width: 12vw;
+.stopwatch-controls li:nth-child(1) {
+    border-radius: 50px 0 0 50px;
+}
+
+.stopwatch-controls li:nth-child(2) {
+    border-radius: 0;
+}
+
+.stopwatch-controls li:nth-child(3) {
+    border-radius: 0 50px 50px 0;
+}
+
+.stopwatch-controls li {
+    display: flex;
+    width: 120px;
+    height: 40px;
+
+    margin-top: 16px;
 
     background: #9BCAF5;
-    border-radius: 15px;
-    text-align: center;
-    padding-top: 16px;
 
-    margin-top: 16px;
-
-    font-size: 2em;
-    font-weight: bold;
-    color: #D7ECFF;
-    text-shadow: 9.05618px 4.52809px 11.3202px rgba(0, 0, 0, 0.15);
-
-    transition: 0.5s;
-}
-
-.stopwatch-main-function:hover {
-    background-color: #3270AB;
-    color: #9BCAF5;
-}
-
-.stopwatch-historic {
-    height: 400px;
-    width: 40vw;
-
-    margin-top: 16px;
-    margin-left: auto;
-    margin-right: auto;
-
-    padding-top: 16px;
-    padding-left: 16px;
-    
-    box-shadow:  0 0 2px rgba(0, 132, 255, 0.15);
-
-    font-size: 3em;
-    color: #bed9f1;
+    justify-content: center;
 }
