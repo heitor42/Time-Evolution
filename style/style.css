@@ -3,7 +3,7 @@
     --second-color: #93C7F9;
     --border-color: #4092DE;
     --main-font-color: #D7ECFF;
-
+    --footer-background-color: #234F78;
 }
 
 body {
@@ -15,6 +15,10 @@ header h1 {
     margin: 16px 32px;
     font-family: Playfair Display;
     font-size: 32px;
+}
+
+.stopwatch-table {
+    min-height: calc(100vh - 64px);
 }
 
 .stopwatch-back {
@@ -82,6 +86,29 @@ header h1 {
 
 .stopwatch-historic li {
     margin-top: 16px;
+}
+
+footer {
+    display: inline-block;
+    width: 100VW;
+    background: var(--footer-background-color);
+    color: var(--main-font-color);
+}
+
+footer ol {
+    display: flex;
+}
+
+.social-icon {
+    width: 31px;
+    height: 25px;
+    color: var(--main-font-color);
+}
+
+footer h1 {
+    margin: 16px 32px;
+    font-family: Playfair Display;
+    font-size: 32px;
 }
 
 @media(min-width:750px) {
