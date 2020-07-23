@@ -1,5 +1,13 @@
+:root {
+    --base-color: #48A4F8;
+    --second-color: #93C7F9;
+    --border-color: #4092DE;
+    --main-font-color: #D7ECFF;
+
+}
+
 body {
-    background: #48A4F8;
+    background: var(--base-color);
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -14,7 +22,7 @@ header h1 {
     margin-top: 40px;
     margin-bottom: 16px;
 
-    color: #D7ECFF;
+    color: var(--main-font-color);
     
     font-size: 88px;
     line-height: 103px;
@@ -33,7 +41,7 @@ header h1 {
 
 .stopwatch-controls a {
     text-decoration: none;
-    color: #D7ECFF;
+    color: var(--main-font-color);
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 8px;
@@ -60,13 +68,13 @@ header h1 {
 
     margin-top: 16px;
 
-    background: #9BCAF5;
+    background: var(--second-color);
 
     justify-content: center;
 }
 
 .stopwatch-historic {
-    color: #D7ECFF;
+    color: var(--main-font-color);
     font-size: 25px;
     text-align: center;
     margin-top: 40px;
@@ -84,7 +92,7 @@ header h1 {
         margin-left: auto;
         margin-right: auto;
 
-        background-color: #93C7F9;
+        background-color: var(--second-color);
 
         box-shadow: 2px 2px 8px rgba(16, 37, 56, 0.16);
         border-radius: 27.9483px;
@@ -111,6 +119,10 @@ header h1 {
         border-radius: 50px;
     }
 
+    .stopwatch-main-function:hover {
+        background: var(--border-color);
+    }
+
     .stopwatch-historic {
         width: 640px;
         height: 475px;
@@ -118,9 +130,9 @@ header h1 {
         margin-left: auto;
         margin-right: auto;
 
-        background: #93C7F9;
+        background: var(--second-color);
 
-        border: 8px solid #4092DE;
+        border: 8px solid var(--border-color);
         box-sizing: border-box;
         border-radius: 27.9483px;
 
