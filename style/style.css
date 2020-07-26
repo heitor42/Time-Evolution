@@ -89,14 +89,17 @@ header h1 {
 }
 
 footer {
-    display: inline-block;
     width: 100VW;
     background: var(--footer-background-color);
-    color: var(--main-font-color);
 }
 
-footer ol {
+footer div {
     display: flex;
+}
+
+.social {
+    margin: 16px 32px;
+    margin-left: auto;
 }
 
 .social-icon {
@@ -109,6 +112,7 @@ footer h1 {
     margin: 16px 32px;
     font-family: Playfair Display;
     font-size: 32px;
+    color: var(--main-font-color);
 }
 
 @media(min-width:750px) {
@@ -162,7 +166,7 @@ footer h1 {
 
     .stopwatch-historic {
         width: 640px;
-        height: 475px;
+        min-height: 475px;
 
         margin-left: auto;
         margin-right: auto;
@@ -178,6 +182,10 @@ footer h1 {
 
     .stopwatch-historic li:nth-child(1) {
         margin-top: 39px;
+    }
+    
+    .stopwatch-historic li:nth-last-child(1) {
+        margin-bottom: 39px;
     }
     .stopwatch-historic li {
         margin-left: 56px;
