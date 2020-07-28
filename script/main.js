@@ -16,6 +16,7 @@ class Stopwatch {
             Space() {
                 if (stopwatch.running) {
                     stopwatch.saveResult();
+                    stopwatch.start();
                 } else {
                     stopwatch.start();
                 }
