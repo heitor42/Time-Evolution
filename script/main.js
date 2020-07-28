@@ -6,6 +6,24 @@ class Stopwatch {
         this.question = 0;
         this.reset();
         this.print(this.times);
+                
+    }
+
+    runKeyFunction(e) {
+        const keyPressed = e.code
+        const keyboardFunctions = {
+            // StartStopWithSpaceKey
+            Space() {
+                if (stopwatch.running) {
+                    stopwatch.saveResult();
+                } else {
+                    stopwatch.start();
+                }
+            }
+        };
+
+        const keyFunction = keyboardFunctions[keyPressed]
+        if (keyFunction){ keyFunction()}
     }
 
     reset() {
@@ -71,7 +89,7 @@ class Stopwatch {
 
     format(times) {
         return `${pad0(times[0], 2)}:${pad0(times[1], 2)}`;
-    }
+    }  
 }
 
 function pad0(value, count) {
@@ -90,3 +108,5 @@ let stopwatch = new Stopwatch(
     document.querySelector('.stopwatch'),
     document.querySelector('.results')
 )
+
+document.addEventListener("keydown", (stopwatch.runKeyFunction));
