@@ -12,7 +12,7 @@ class Stopwatch {
     runKeyFunction(e) {
         const keyPressed = e.code
         const keyboardFunctions = {
-            // StartStopWithSpaceKey
+            // Next Question
             Space() {
                 if (stopwatch.running) {
                     stopwatch.saveResult();
