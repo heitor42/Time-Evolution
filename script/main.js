@@ -20,6 +20,9 @@ class Stopwatch {
                 } else {
                     stopwatch.start();
                 }
+            },
+            Enter() {
+                if (stopwatch.running) stopwatch.saveResult();
             }
         };
 
