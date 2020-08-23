@@ -8,19 +8,25 @@ export const FooterBase = styled.footer`
     display: flex;
   }
 
-  .social {
-    margin: 16px 32px;
+  p {
     margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+
+    color: var(--main-font-color)
   }
 
-  .social-icon {
-    width: 31px;
-    height: 25px;
+  a {
     color: var(--main-font-color);
+    text-decoration: none;
   }
 
   & h1 {
-    margin: 8px 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    margin-left: 32px;
+
     font-family: Playfair Display;
     font-size: 32px;
     color: var(--main-font-color);
