@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 import Header from '../../Components/Header/index.jsx';
 import Footer from '../../Components/Footer/index.jsx';
 
 function Home() {
+  const [state, setState] = useState({
+    running: false,
+    time: null,
+    times: [0, 0, 0],
+  })
+
   return (
     <>
       <Header />
