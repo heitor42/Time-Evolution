@@ -1,9 +1,8 @@
 import React from 'react';
+import './style.css';
 
 import Header from '../../Components/Header/index.jsx';
 import Footer from '../../Components/Footer/index.jsx';
-
-import StopwatchMainFunction from '../../Components/Button/style';
 
 function Home() {
   return (
@@ -16,7 +15,7 @@ function Home() {
         </div>
         <nav class="stopwatch-controls">
           <ul>
-            <li><StopwatchMainFunction href="#" onclick="stopwatch.start()">Start</StopwatchMainFunction></li>
+            <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.saveResult()">Start</a></li>
             <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.saveResult()">Finish</a></li>
             <li><a href="#" class="stopwatch-main-function" onclick="stopwatch.clear()">Clean</a></li>
           </ul>
