@@ -1,51 +1,63 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import ReactDOM from 'react-dom'
-
-import grid from '../../assets/tic-tac-toe.svg'
 
 import Header from '../../Components/Header/index';
 import Footer from '../../Components/Footer/index';
 
 import './style.css';
-import { stringify } from 'querystring';
 
 interface ISquareProps {
   value: number;
+  onClick: any;
 }
 
 interface ISquareState {
-  value?: string;
+  value?: string | null;
 }
 
-class Square extends React.Component<ISquareProps, ISquareState> {
-  constructor(props: any) {
+interface IBoardProps {
+}
+
+interface IBoardState {
+  squares: any;
+  xIsNext: boolean;
+}
+
+function Square(props: ISquareProps) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+}
+
+class Board extends React.Component<IBoardProps, IBoardState> {
+  constructor(props: IBoardProps) {
     super(props);
     this.state = {
-      value: '',
-    };
+      squares: Array(9).fill(null),
+      xIsNext: true,
+    }
   }
 
-  render() {
-    return (
-      <button className="square">
-        <button
-          className="square"
-          onClick={() => this.setState({ value: 'X' })}
-        >
-          {this.state.value}
-        </button>
-      </button>
-    );
+  handleClick(i: any) {
+    const squares = this.state.squares.slice();
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    this.setState({
+      squares: squares,
+      xIsNext: !this.state.xIsNext,
+    });
   }
-}
 
-class Board extends React.Component {
   renderSquare(i: number) {
-    return <Square value={i} />;
+    return <Square
+      value={this.state.squares[i]}
+      onClick={() => this.handleClick(i)}
+    />;
   }
 
   render() {
-    const status = 'Next player: X';
+    const status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
 
     return (
       <div>
@@ -92,7 +104,6 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <img src={grid} alt="grid" />
       <Game />
       <Footer />
     </>
