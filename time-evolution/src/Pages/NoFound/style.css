@@ -1,53 +1,17 @@
-ol, ul {
-  padding-left: 30px;
-}
-
-.grid {
-  background: url('../../assets/tic-tac-toe.svg') no-repeat center;
-  box-shadow: 5px;
-}
-
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
+.main {
+  display: flex;
+  font-size: 298px;
   font-family: 'Nunito', sans-serif;
-}
+  color: var(--main-font-color);
+  justify-content: center;
+  align-items: center;
 
-.square {
-  background: rgba(0, 0, 0, 0);
-  border: none;
-  float: left;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 66px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 66px;
-  font-family: 'Nunito', sans-serif;
-  color: var(--main-font-color)
-}
+  min-height: 86.6vh;
+  position: relative;
 
-.square:focus {
-  outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
+  background: var(  --second-color);
 }
 
 .game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
+  margin-top: 40px;
 }
