@@ -1,15 +1,22 @@
-.main {
+.text {
   display: flex;
   font-size: 298px;
   font-family: 'Nunito', sans-serif;
   color: var(--main-font-color);
   justify-content: center;
   align-items: center;
-
-  min-height: 86.6vh;
-  position: relative;
+  border-radius: 20px;
+  width: 867px;
+  height: 325px;
 
   background: var(  --second-color);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 86.6vh;
 }
 
 .game {

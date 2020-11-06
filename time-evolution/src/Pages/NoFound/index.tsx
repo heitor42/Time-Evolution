@@ -11,11 +11,13 @@ export default function NotFound() {
     <>
       <Header />
       <div className="main">
-        4
-        <div className="game">
-          <Game />
+        <div className="text">
+          4
+          <div className="game">
+            <Game />
+          </div>
+          4
         </div>
-        4
       </div>
       <Footer />
     </>

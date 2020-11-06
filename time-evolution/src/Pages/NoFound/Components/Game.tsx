@@ -35,6 +35,9 @@ function calculateWinner(squares: any) {
       return squares[a]
     }
   }
+  if (squares.find((e: any) => e === null) !== null) {
+    return "tie"
+  }
   return null;
 }
 
@@ -55,6 +58,12 @@ class Board extends React.Component<IBoardProps, IBoardState> {
     }
   }
 
+  handleReset() {
+    this.setState({
+      squares: Array(9).fill(null),
+      xIsNext: this.state.xIsNext,
+    });
+  }
 
   handleClick(i: number) {
     const squares = this.state.squares.slice();
@@ -106,11 +115,13 @@ class Board extends React.Component<IBoardProps, IBoardState> {
           </div>
           :
           <div className="player">
-            <div className="playerWinner" onClick={() => { }}>{winner} won</div>
+            {winner === 'tie' ?
+              <div className="playerWinner" onClick={() => { this.handleReset() }}>Empate</div>
+              :
+              <div className="playerWinner" onClick={() => { this.handleReset() }}>{winner} won</div>
+            }
           </div>
         }
-
-
       </div>
     );
   }

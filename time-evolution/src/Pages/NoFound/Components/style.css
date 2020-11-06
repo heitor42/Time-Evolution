@@ -4,6 +4,7 @@ ol, ul {
 
 .grid {
   background: url('../../../assets/tic-tac-toe.svg') no-repeat center;
+  margin-top: 64px;
 }
 
 .board-row:after {
@@ -59,7 +60,7 @@ ol, ul {
   display: flex;
   justify-content: space-around;
   font-size: 48px;
-  margin-top: 64px;
+  margin-top: 128px;
 }
 
 .playerShadow {
@@ -67,6 +68,11 @@ ol, ul {
 }
 
 .playerWinner {
+  text-shadow: 0 0 20px #A0AB29;
+  color: #E7F72F;
+}
+
+.playerTie {
   text-shadow: 0 0 20px #A0AB29;
   color: #E7F72F;
 }
