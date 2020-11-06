@@ -16,11 +16,11 @@ export default function Stopwatch(initialState: number = 0) {
 
   }
 
-  function handlePause() {
-    clearInterval(countRef.current)
-    setIsPaused(false)
-    setIsActive(false);
-  }
+  // function handlePause() {
+  //   clearInterval(countRef.current)
+  //   setIsPaused(false)
+  //   setIsActive(false);
+  // }
 
   function handleFinish() {
     if (timer === 0) return;
