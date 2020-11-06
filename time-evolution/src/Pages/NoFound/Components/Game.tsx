@@ -116,7 +116,7 @@ class Board extends React.Component<IBoardProps, IBoardState> {
           :
           <div className="player">
             {winner === 'tie' ?
-              <div className="playerWinner" onClick={() => { this.handleReset() }}>Empate</div>
+              <div className="playerTie" onClick={() => { this.handleReset() }}>Empate</div>
               :
               <div className="playerWinner" onClick={() => { this.handleReset() }}>{winner} won</div>
             }
