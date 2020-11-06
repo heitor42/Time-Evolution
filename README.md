@@ -3,7 +3,7 @@
 
 With a Tic Tac Toe on de page 404
 
-[TEVO](https://heitor42.github.io/Time-Evolution/)
+[TEVO](https://time-evolution.vercel.app/)
 
 ## Objective
 
