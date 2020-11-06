@@ -1,0 +1,12 @@
+:root {
+  --base-color: #48A4F8;
+  --second-color: #93C7F9;
+  --border-color: #4092DE;
+  --main-font-color: #D7ECFF;
+  --footer-background-color: #234F78;
+}
+
+body {
+background: var(--base-color);
+font-family: 'Roboto Mono', monospace;
+}

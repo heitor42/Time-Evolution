@@ -1,0 +1,148 @@
+.stopwatch-table {
+  min-height: calc(100vh - 64px);
+}
+
+.stopwatch-back {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 16px;
+
+  color: var(--main-font-color);
+
+  font-size: 88px;
+  line-height: 103px;
+
+  justify-content: center;
+}
+
+.stopwatch-controls ul {
+  display: flex;
+}
+.stopwatch-controls {
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stopwatch-controls a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 8px;
+}
+
+@media(max-width: 750px) {
+  .stopwatch-controls li:nth-child(1) {
+      border-radius: 50px 0 0 50px;
+  }
+
+  .stopwatch-controls li:nth-child(2) {
+      border-radius: 0;
+  }
+
+  .stopwatch-controls li:nth-child(3) {
+      border-radius: 0 50px 50px 0;
+  }
+}
+
+.stopwatch-controls li {
+  display: flex;
+  width: 120px;
+  height: 40px;
+
+  margin-top: 16px;
+
+  background: var(--second-color);
+
+  justify-content: center;
+}
+
+.stopwatch-historic {
+  color: var(--main-font-color);
+  font-size: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.stopwatch-historic li {
+  margin-top: 16px;
+}
+
+@media(min-width:750px) {
+  .stopwatch-back {
+      width: 640px;
+      height: 240px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      background-color: var(--second-color);
+
+      box-shadow: 2px 2px 8px rgba(16, 37, 56, 0.16);
+      border-radius: 27.9483px;
+
+      font-size: 160px;
+      text-shadow: 2.37858px 1.18929px 6.73151px rgba(0, 0, 0, 0.15);
+  }
+
+  .stopwatch {
+      margin-top: 56px;
+  }
+
+  .stopwatch-controls {
+      width: 640px;
+  }
+
+  .stopwatch-controls ul {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .stopwatch-controls li {
+      width: 170px;
+      border-radius: 50px;
+  }
+
+  .stopwatch-main-function {
+      width: 170px;
+      border-radius: 50px;
+      border: solid var(--border-color);
+      font-size: 1.1em;
+      text-align: center;
+
+      transition: background 0.3s;
+  }
+
+  .stopwatch-main-function:hover {
+      background: var(--border-color);
+  }
+
+  .stopwatch-historic {
+      width: 640px;
+      min-height: 475px;
+
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 32px;
+
+      background: var(--second-color);
+
+      border: 8px solid var(--border-color);
+      box-sizing: border-box;
+      border-radius: 27.9483px;
+
+      text-align: left;
+  }
+
+  .stopwatch-historic li:nth-child(1) {
+      margin-top: 39px;
+  }
+
+  .stopwatch-historic li:nth-last-child(1) {
+      margin-bottom: 39px;
+  }
+  .stopwatch-historic li {
+      margin-left: 56px;
+  }
+}
